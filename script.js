@@ -47,13 +47,13 @@ const serverData = [
 /**nav menu */
 document.getElementById('nav-collaps').addEventListener('click', function() {
   const nav = document.querySelector('.nav');
-  nav.classList.toggle('menu-open'); // Добавляем/удаляем класс для открытия/закрытия меню
+  nav.classList.toggle('menu-open'); 
 });
-
+/**for test buttons */
 function test(){
   alert("It works )))");
 }
-
+/**create questions component */
 document.addEventListener('DOMContentLoaded', function() {
   const listOfQuestions = document.querySelector('.listOfQuestions');
   listOfQuestions.innerHTML = serverData.map(data => `
@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <span>${data.views}</span>
         <span>view</span>
       </div>
-      
     </div>
     </a>
   `).join('');
