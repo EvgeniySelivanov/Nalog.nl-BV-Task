@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title> Nalog.nl BV Task</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <div id="nav-collaps"><img src="icons/bar.svg" alt=""></div>
+      <h1>Taxagent.nl</h1>
+      <div class="languageSwitch" onclick="test()">
+        <p>EN</p>
+      </div>
+      <ul class="menu">
+        <li><a href="/">First</a></li>
+        <li><a href="/">Second</a></li>
+        <li><a href="/">Third</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="questionsSection">
+      <div class="titleQuestionsSection">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>></li>
+          <li><a href="/">Ask a question</a></li>
+        </ul>
+        <h2>Ask a question to a consultant</h2>
+        <a href="/">
+          <button class="buttonLinkToAsk">
+            <span>Ask a question</span>
+            <span><img src="icons/arrow.svg" alt=""></span>
+          </button>
+        </a>
+      </div>
+      <form action="#" id="formSearchQuestion">
+        <input type="text" name="searchQuestion" id="searchQuestion" placeholder="Search question"
+          class="inputWithIcon">
+      </form>
+      <div class="listOfQuestions"></div>
+      <div class="questionsPagination">
+        <button onclick="test()"><img src="icons/arrowPaginationLeft.svg" alt=""></button>
+        <button onclick="test()"><img src="icons/arrowPaginationRight.svg" alt=""></button>
+      </div>
+      <div>
+        <a href="/">
+          <button class="buttonLinkToAsk">
+            <span>Ask a question</span>
+            <span></span>
+          </button>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
