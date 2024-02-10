@@ -42,7 +42,12 @@ a:visited {
   border: 3px solid rgba(146, 154, 115, 1);
   border-radius: 50%;
 }
-
+.menuItems {
+  display: none;
+}
+.menuButton {
+  display: none;
+}
 .nav .menu {
   border-radius: 16px;
   padding-bottom: 15px;
@@ -75,6 +80,9 @@ a:visited {
   gap: 32px;
   margin-bottom: 20px;
 }
+.titleQuestionsSectionHD {
+  display: none;
+}
 .titleQuestionsSection {
   padding: 20px 20px 36px 20px;
   background-image: linear-gradient(
@@ -100,22 +108,30 @@ a:visited {
 .questionsSection h2 {
   font-size: 40px;
 }
-
 .buttonLinkToAsk {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 350px;
+  min-width: 350px;
   height: 76px;
   font-size: 24px;
   border-radius: 8px;
   box-shadow: 8px 8px 1px rgba(28, 29, 24, 1);
-}
+  transition: 0.5s;
+  border: 1px solid black;
+  background-color: rgba(246, 246, 241, 1);
 
-.inputWithIcon {
+}
+.buttonLinkToAsk:hover {
+  background-color: #d3a373;
+  transition: 0.5s;
+}
+.searchQuestion {
+  text-align: start;
   min-width: 350px;
   min-height: 100px;
   position: relative;
+  background-color: white;
   background-image: url('icons/search.svg');
   background-size: 33px 33px;
   background-position: right 20px center;
@@ -123,14 +139,9 @@ a:visited {
   border: 1px solid rgba(146, 154, 115, 1);
   border-radius: 16px;
   font-size: 16px;
-  outline: none;
-  text-indent: 32px;
-}
-
-.inputWithIcon::placeholder {
-  position: absolute;
-  color: rgba(28, 29, 24, 1); /* Цвет плейсхолдера */
-  font-size: 16px; /* Размер шрифта плейсхолдера */
+  line-height: 100px;
+  color: black;
+  padding-left: 40px;
 }
 
 .question {
@@ -163,7 +174,6 @@ a:visited {
   font-size: 16px;
   margin-bottom: 8px;
 }
-
 .questionDate {
   display: flex;
   gap: 5px;
@@ -172,13 +182,167 @@ a:visited {
 .questionDate :nth-child(2) {
   color: rgba(146, 154, 115, 1);
 }
-
 .viewQuantity {
   font-weight: 500;
   font-size: 14px;
   display: flex;
   flex-direction: column;
 }
-.questionsPagination button{
+.questionsPagination button {
+  background-color: white;
   border: none;
+}
+.linksToQuestionsHD > div:first-child {
+  display: none;
+}
+@media (min-width: 996px) {
+  main {
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f1;
+    background-image: url('icons/mainBG.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  #nav-collaps {
+    display: none;
+  }
+  .menuItems {
+    list-style-type: none;
+    display: block;
+  }
+  .menuItems li {
+    display: inline-block; /* Размещаем элементы в ряд */
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  .menuButton {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 315px;
+    height: 76px;
+    font-size: 24px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 1px rgba(28, 29, 24, 1);
+    transition: 0.5s;
+  }
+  .menuButton:hover {
+    background-color: #d3a373;
+    transition: 0.5s;
+  }
+  .titleQuestionsSection {
+    display: none;
+  }
+  .questionsSection {
+    max-width: 1580px;
+    min-width: 996px;
+  }
+  .listOfQuestions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .searchQuestion {
+    display: none;
+  }
+  .titleQuestionsSectionHD {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .titleQuestionsSectionHD :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 90px;
+  }
+  .titleQuestionsSectionHD h2 {
+    font-size: 78px;
+    font-weight: 400;
+  }
+  .diagonalArrowInQuestionsSection {
+    width: 112px;
+    height: 112px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .diagonalArrowInQuestionsSection:hover {
+    border-radius: 50%;
+    background-color: #d3a373;
+    transition: 0.5s;
+    transform: rotate(90deg);
+  }
+  .question {
+    background-color: white;
+    height: 144px;
+    padding-bottom: 16px;
+    border-radius: 16px;
+    transition: 0.5s;
+    border: 1px solid white;
+  }
+  .question:hover {
+    border: 1px solid black;
+    transition: 0.5s;
+  }
+  .questionTitle h3 {
+    font-size: 30px;
+  }
+  .ellips {
+    width: 112px;
+    height: 112px;
+    transition: 0.5s;
+  }
+  .question:hover .ellips {
+    background-color: black;
+    transition: 0.5s;
+  }
+  .ellips img {
+    top: 30%;
+    left: 30%;
+    width: 50px;
+    height: 50px;
+  }
+  .viewQuantity {
+    align-items: center;
+  }
+  .viewQuantity :nth-child(1) {
+    font-size: 24px;
+  }
+  .questionsPagination {
+    display: none;
+  }
+  .linksToQuestionsHD {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 152px;
+  }
+  .linksToQuestionsHD > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 28px;
+    padding-right: 28px;
+    background-color: rgba(205, 213, 176, 1);
+    flex-basis: 60%;
+    height: 100px;
+    border-radius: 100px;
+    font-size: 24px;
+    transition: 0.5s;
+  }
+  .linksToQuestionsHD > div:first-child:hover {
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .linksToQuestionsHD > div:first-child img {
+    transition: 0.5s;
+  }
+  .linksToQuestionsHD > div:first-child:hover img {
+    filter: invert(100%);
+    transition: 0.5s;
+  }
 }

@@ -17,18 +17,39 @@
     <nav class="nav">
       <div id="nav-collaps"><img src="icons/bar.svg" alt=""></div>
       <h1>Taxagent.nl</h1>
+      <ul class="menuItems">
+        <li><a href="/">About Me</a></li>
+        <li><a href="/">Secvices</a></li>
+        <li><a href="/">Our news</a></li>
+        <li><a href="/">Cources</a></li>
+        <li><a href="/">FAQ</a></li>
+      </ul>
       <div class="languageSwitch" onclick="test()">
         <p>EN</p>
       </div>
+      <button class="menuButton">
+        <span>Find consultation</span>
+        <span><img src="icons/arrow.svg" alt=""></span>
+      </button>
       <ul class="menu">
-        <li><a href="/">First</a></li>
-        <li><a href="/">Second</a></li>
-        <li><a href="/">Third</a></li>
+        <li><a href="/">About Me</a></li>
+        <li><a href="/">Secvices</a></li>
+        <li><a href="/">Our news</a></li>
+        <li><a href="/">Cources</a></li>
+        <li><a href="/">FAQ</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="questionsSection">
+      <div class="titleQuestionsSectionHD">
+        <div>
+          <h2>Ask a question to a consultant</h2>
+          <div class="diagonalArrowInQuestionsSection"><img src="./icons/arrowDiagonal.svg" alt=""></div>
+        </div>
+        <span>Here you can ask a tax consultant a question and get an answer. Always happy to stay in touch with
+          you.</span>
+      </div>
       <div class="titleQuestionsSection">
         <ul>
           <li><a href="/">Home</a></li>
@@ -36,29 +57,32 @@
           <li><a href="/">Ask a question</a></li>
         </ul>
         <h2>Ask a question to a consultant</h2>
-        <a href="/">
-          <button class="buttonLinkToAsk">
+        <a href="/" class="buttonLinkToAsk buttonLinkToAskWidth">
             <span>Ask a question</span>
-            <span><img src="icons/arrow.svg" alt=""></span>
-          </button>
+            <img src="icons/arrow.svg" alt="">
         </a>
       </div>
-      <form action="#" id="formSearchQuestion">
-        <input type="text" name="searchQuestion" id="searchQuestion" placeholder="Search question"
-          class="inputWithIcon">
-      </form>
+
+    
+        <a href="/formQuestion" class="searchQuestion">
+          Search question
+        </a>
+     
+
       <div class="listOfQuestions"></div>
       <div class="questionsPagination">
         <button onclick="test()"><img src="icons/arrowPaginationLeft.svg" alt=""></button>
         <button onclick="test()"><img src="icons/arrowPaginationRight.svg" alt=""></button>
       </div>
-      <div>
-        <a href="/">
-          <button class="buttonLinkToAsk">
+      <div class="linksToQuestionsHD">
+        <div><a href="">Show all questions</a><span><img src="./icons/arrowDiagonal.svg" alt="" width="40"
+              height="40"></span></div>
+        <div>
+          <a href="/" class="buttonLinkToAsk buttonLinkToAskWidth">
             <span>Ask a question</span>
-            <span></span>
-          </button>
+            <img src="icons/arrow.svg" alt="">
         </a>
+        </div>
       </div>
     </section>
   </main>

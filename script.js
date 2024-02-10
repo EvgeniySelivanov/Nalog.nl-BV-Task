@@ -1,7 +1,7 @@
 
 const serverData = [
   { id:1,
-    title: "I don't want to pay taxes in the Netherlands", 
+    title: "Portuguese company (unipessoal ltd)", 
     date: "22.05.2023", 
     category: "Taxation of IP", 
     views: 285 
@@ -9,25 +9,25 @@ const serverData = [
   { id:2,
     title: "I don't want to pay taxes in the Netherlands", 
     date: "22.05.2023", 
-    category: "Taxation of IP", 
+    category: "Opening and work of IP", 
     views: 285 
   },
   { id:3,
-    title: "I don't want to pay taxes in the Netherlands", 
+    title: "EMZ clearance for high skilled migrant", 
     date: "22.05.2023", 
     category: "Taxation of IP", 
     views: 285 
   },
   { id:4,
-    title: "I don't want to pay taxes in the Netherlands", 
+    title: "Portuguese company (unipessoal ltd)", 
     date: "22.05.2023", 
-    category: "Taxation of IP", 
+    category: "Opening and work of IP", 
     views: 285 
   },
   { id:5,
-    title: "I don't want to pay taxes in the Netherlands", 
+    title: "Buying a house in the Netherlands for non-residents", 
     date: "22.05.2023", 
-    category: "Taxation of IP", 
+    category: "Common", 
     views: 285 
   },
   { id:6,
@@ -37,7 +37,7 @@ const serverData = [
     views: 285 
   },
   { id:7,
-    title: "I don't want to pay taxes in the Netherlands", 
+    title: "EMZ clearance for high skilled migrant", 
     date: "22.05.2023", 
     category: "Taxation of IP", 
     views: 285 
@@ -48,16 +48,6 @@ const serverData = [
 document.getElementById('nav-collaps').addEventListener('click', function() {
   const nav = document.querySelector('.nav');
   nav.classList.toggle('menu-open'); // Добавляем/удаляем класс для открытия/закрытия меню
-});
-
-/**submitting form */
-const input = document.getElementById('searchQuestion');
-const form = document.getElementById('formSearchQuestion');
-input.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    form.submit();
-  }
 });
 
 function test(){
